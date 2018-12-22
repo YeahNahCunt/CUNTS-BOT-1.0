@@ -163,6 +163,8 @@ class SFWCog:
             embed.add_field(name=':poop:',value='From : r/'+ sub_rand)
             embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name)
 
+            await ctx.send(embed=embed)
+
 
 
 
