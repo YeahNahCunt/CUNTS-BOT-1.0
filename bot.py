@@ -43,7 +43,7 @@ async def help(ctx):
     embed.add_field(name=':spy: General :spy:', value=
     '`ping      :` Ping bot to see if online\n'+
     '`pingNSFW  :` Ping bot to see if channel is NSFW', inline=False)
-    embed.add_field(name=':baby_bottle: Safe for Commands :baby_bottle:', value=
+    embed.add_field(name=':baby_bottle: Safe for work commands :baby_bottle:', value=
     '`meme      :` For dank Memes\n'+
     '`gifs      :` For dank Gifs', inline=False)
     embed.add_field(name=':underage: General NSFW :underage:', value=
