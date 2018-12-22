@@ -1,0 +1,5 @@
+configparser
+discord.py *** MUST BE DISCORD REWRITE  (pip install discord-rewrite) ****
+ctx
+Imgurpython ***Imgur API (https://apidocs.imgur.com) ***
+random
