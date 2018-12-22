@@ -18,9 +18,6 @@ class SFWCog:
     async def on_ready(self):
         print('SFWCog is Prepared')
 
-    @commands.command()
-    async def sfw(self, ctx):
-        await ctx.send('sfw')
 
 
 #Imgur commands#
