@@ -19,12 +19,14 @@ The bot currently uses "." as a prefix.
 1. Add multiple alternatives/spellings such as caps etc. to command function (aliases)
 
 2. Fix " list index out of range " Index error for some subs when it cannot find an image
-            - make it eithe rloop to try again or print error for user to try again
+            - make it either loop to try again or print error for user to try again
+            
+3. Fix "embed load error" **Current Focus**            
+            
 
-3. Add Games (8ball, question games etc.)
+4. Add Games (8ball, question games etc.)
 
-4. Add More SFW commands
+5. Add More SFW commands
 
-5. Down the line add Sripture query functions to Bible, Quran, Gurbani etc. (To cater to my server users)
-
+6. Down the line add Sripture query functions to Bible, Quran, Gurbani etc. (To cater to my server users)
 
