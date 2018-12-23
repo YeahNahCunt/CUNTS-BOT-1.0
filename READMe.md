@@ -27,5 +27,4 @@ The bot currently uses "." as a prefix.
 
 5. Down the line add Sripture query functions to Bible, Quran, Gurbani etc. (To cater to my server users)
 
-6. Simplify code to pull subreddit lists from a .json file ( just makes the code cleaner an deasier to update the lists **(current focus)**
 
