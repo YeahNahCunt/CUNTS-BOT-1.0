@@ -1,7 +1,7 @@
 [
     {
-        "meme": "meme subs",
-        "memes": [
+        "memes": "meme subs",
+        "memeslist": [
             "AdviceAnimals",
             "memes",
             "trippinthroughtime",
@@ -56,7 +56,7 @@
     },
     {
         "gifs": "gif subs",
-        "gifs":[
+        "gifslist":[
             "gifs",
             "behindthegifs",
             "gif",
