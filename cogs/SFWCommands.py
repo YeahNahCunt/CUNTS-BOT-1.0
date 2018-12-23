@@ -2,6 +2,7 @@ import Auth #File contains login and token#
 import discord
 import random
 import ctx
+import json
 from discord.ext import commands
 from imgurpython import ImgurClient
 
@@ -18,152 +19,49 @@ class SFWCog:
     async def on_ready(self):
         print('SFWCog is Prepared')
 
-
-
 #Imgur commands#
- #memes#
-    @commands.command(pass_context=True)
-    async def meme(self, ctx):
+ #memes and gifs#
+    @commands.command(
+        pass_context=True,
+        description="used for testing JSON file; can be used as .code_test **subtypename**"
+        )
+    async def iwant(self, ctx, userinput):
+            userinput = userinput.lower() # Capitalisation from user won't matter anymore
+
             avatar = ctx.message.author.avatar_url
+    
             author = ctx.message.author
-            sub_rand = random.choice([
-            'AdviceAnimals',
-            'memes',
-            'trippinthroughtime',
-            'BikiniBottomTwitter',
-            'dankmemes',
-            'madlads',
-            'bidenbro',
-            'memeeconomy',
-            'rarepuppers',
-            'wholesomememes',
-            'dankchristianmemes',
-            'terriblefacebookmemes',
-            'prequelmemes',
-            'dank_meme',
-            'trebuchetmemes',
-            'deepfriedmemes',
-            'Overwatch_Memes',
-            'see',
-            'SequelMemes',
-            'surrealmemes',
-            'bonehurtingjuice',
-            'bossfight',
-            'historymemes',
-            'animemes',
-            'suddenlygay',
-            'absoluteunits',
-            'delightfullychubby',
-            'Memes_Of_The_Dank',
-            'smoobypost',
-            'lotrmemes',
-            'ilikthebred',
-            'meme',
-            'garlicbreadmemes',
-            'offensivememes',
-            'gocommitdie',
-            'wholesomegreentext',
-            'raimememes',
-            'otmemes',
-            'kappa',
-            'equelmemes',
-            'namflashbacks',
-            'me_irl',
-            'meirl',
-            'anime_irl',
-            '2meirl4meirl',
-            'meow_irl',
-            'woof_irl',
-            'TooMeIrlForMeIrl',
-            'absolutelynotme_irl',
-            'absolutelynotmeirl'
-            ])
+
+            with open('SFW_Sublist.json') as f:
+                data = json.load(f)
+
+            for category in data: # Iterate through json file, picks random sub from list
+                if userinput in category["subname"]:
+                
+                    sub_rand = random.choice(category["sublist"])
+
             rand = random.randint(0, 59)  # 60 results generated per page
+
             items = grab.subreddit_gallery(subreddit =sub_rand)
+
             image = (items[rand].link)
+
             imagename = (items[rand].title)
-            sublink =(items[rand].tags)
 
             embed = discord.Embed(
                 title = imagename,
                 colour = discord.Colour.blurple(),
                 )
+
             embed.set_image(url=image)
-            embed.add_field(name=':poop:',value='From : r/'+ sub_rand)
+
+            embed.add_field(name='\u200b',value='From : r/'+ sub_rand, inline=False) ###'\u200b' HTML cheat to keep field clear##
+
+            embed.add_field(name='\u200b', value=image, inline=False)
+
             embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name)
 
             await ctx.send(embed=embed)
-
- #gifs#
-    @commands.command(pass_context=True)
-    async def gifs(self, ctx):
-            avatar = ctx.message.author.avatar_url
-            author = ctx.message.author
-            sub_rand = random.choice([
-            'gifs',
-            'behindthegifs',
-            'gif',
-            'Cinemagraphs',
-            'WastedGifs',
-            'educationalgifs',
-            'perfectloops',
-            'highqualitygifs',
-            'gifsound',
-            'combinedgifs',
-            'retiredgif',
-            'michaelbaygifs',
-            'gifrecipes',
-            'mechanical_gifs',
-            'bettereveryloop',
-            'gifextra',
-            'slygifs',
-            'gifsthatkeepongiving',
-            'wholesomegifs',
-            'noisygifs',
-            'brokengifs',
-            'loadingicon',
-            'splitdepthgifs',
-            'blackpeoplegifs',
-            'whitepeoplegifs',
-            'asianpeoplegifs',
-            'scriptedasiangifs',
-            'reactiongifs',
-            'shittyreactiongifs',
-            'chemicalreactiongifs',
-            'physicsgifs',
-            'babyelephantgifs',
-            'weathergifs',
-            'animegifs',
-            'seinfeldgifs',
-            'animaltextgifs',
-            'babyelephantgifs',
-            'happycowgifs',
-            'babybigcatgifs',
-            'bigcatgifs',
-            'catgifs',
-            'gifsthatendtoosoon',
-            'shittyreactiongifs',
-            'dashcamgifs',
-            'hmmmgifs'
-            ])
-            rand = random.randint(0, 59)  # 60 results generated per page
-            items = grab.subreddit_gallery(subreddit =sub_rand)
-            image = (items[rand].link)
-            imagename = (items[rand].title)
-            sublink =(items[rand].tags)
-
-            embed = discord.Embed(
-                title = imagename,
-                colour = discord.Colour.blurple(),
-                )
-            embed.set_image(url=image)
-            embed.add_field(name=':poop:',value='From : r/'+ sub_rand)
-            embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name)
-
-            await ctx.send(embed=embed)
-
-
-
 
 
 def setup(client):
