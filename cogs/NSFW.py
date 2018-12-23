@@ -48,18 +48,24 @@ class NSFWCog:
 
             imagename = (items[rand].title)
 
+            file_type = (items[rand].type)
+
             embed = discord.Embed(
                 title = imagename,
                 colour = discord.Colour.blurple(),
                 )
+ 
+            if image.endswith(('.jpg','.jpeg','.gif','.gifv')):
+                embed.set_image(url=image)
 
-            embed.set_image(url=image)
+            if image.endswith('.mp4'):
+                embed.video(url=image)
 
             embed.add_field(name='\u200b',value='From : r/'+ sub_rand, inline=False) ###'\u200b' HTML cheat to keep field clear##
 
             embed.add_field(name='\u200b', value=image, inline=False)
 
-            embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name)
+            embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name )
 
             await ctx.send(embed=embed)
 

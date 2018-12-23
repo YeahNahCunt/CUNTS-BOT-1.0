@@ -32,7 +32,7 @@ class SFWCog:
     
             author = ctx.message.author
 
-            with open('SFW_Sublist.json') as f:
+            with open('SFW_SubList.json') as f:
                 data = json.load(f)
 
             for category in data: # Iterate through json file, picks random sub from list
@@ -52,8 +52,12 @@ class SFWCog:
                 title = imagename,
                 colour = discord.Colour.blurple(),
                 )
+ 
+            if image.endswith(('.jpg','.jpeg','.gif','.gifv')):
+                embed.set_image(url=image)
 
-            embed.set_image(url=image)
+            if image.endswith('.mp4'):
+                embed.video(url=image)
 
             embed.add_field(name='\u200b',value='From : r/'+ sub_rand, inline=False) ###'\u200b' HTML cheat to keep field clear##
 
