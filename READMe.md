@@ -16,12 +16,10 @@ The bot currently uses "." as a prefix.
 
 ## **Things to fix and I want to add**:
 
-1. Add multiple alternatives/spellings such as caps etc. to command function (aliases)
-
-2. Fix " list index out of range " Index error for some subs when it cannot find an image
+2. Fix " list index out of range " Index error for some subs when it cannot find an image **Current Focus**
             - make it either loop to try again or print error for user to try again
                      
-3. And add a "bot is typing..." feature to the bot so user doesnt think bot is malfunctioning while loading content. **Current Focus**       
+**Current Focus**       
 
 4. Add Games (8ball, question games etc.)
 
