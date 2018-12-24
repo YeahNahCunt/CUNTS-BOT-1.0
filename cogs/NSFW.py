@@ -55,17 +55,18 @@ class NSFWCog:
                 colour = discord.Colour.blurple(),
                 )
  
-            if image.endswith(('.jpg','.jpeg','.gif','.gifv')):
+            if image.endswith(('.jpg','.jpeg','.gif','.png')):
                 embed.set_image(url=image)
-
-            if image.endswith('.mp4'):
-                embed.video(url=image)
 
             embed.add_field(name='\u200b',value='From : r/'+ sub_rand, inline=False) ###'\u200b' HTML cheat to keep field clear##
 
             embed.add_field(name='\u200b', value=image, inline=False)
 
-            embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name )
+            if image.endswith('.mp4'):
+                
+                embed.add_field(name=':arrow_up:Discord is gay and wont support HQgifs, so heres a link:arrow_up: ', value='\u200b', inline=False) ###BECAUSE DISCORD DOES NOT SUPPORT VIDEO EMBEDS##
+
+            embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name)
 
             await ctx.send(embed=embed)
 
