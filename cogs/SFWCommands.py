@@ -3,6 +3,7 @@ import discord
 import random
 import ctx
 import json
+import asyncio
 from discord.ext import commands
 from imgurpython import ImgurClient
 
@@ -26,6 +27,9 @@ class SFWCog:
         description="used for testing JSON file; can be used as .code_test **subtypename**"
         )
     async def iwant(self, ctx, userinput):
+        async with ctx.typing():
+            await asyncio.sleep(.05)
+            
             userinput = userinput.lower() # Capitalisation from user won't matter anymore
 
             avatar = ctx.message.author.avatar_url
