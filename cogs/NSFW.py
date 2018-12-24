@@ -29,7 +29,7 @@ class NSFWCog:
     async def nsfw(self, ctx, userinput):
         async with ctx.typing():
             await asyncio.sleep(.05)
-            
+
             userinput = userinput.lower() # Capitalisation from user won't matter anymore
 
             avatar = ctx.message.author.avatar_url
@@ -48,11 +48,12 @@ class NSFWCog:
 
             items = grab.subreddit_gallery(subreddit =sub_rand)
 
-            image = (items[rand].link)
+            try:
+                image = (items[rand].link)
+            except IndexError:
+                await ctx.send("OH NOO! :grimacing: my search couldn't find anything, please try again")
 
             imagename = (items[rand].title)
-
-            file_type = (items[rand].type)
 
             embed = discord.Embed(
                 title = imagename,

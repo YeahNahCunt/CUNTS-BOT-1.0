@@ -48,7 +48,10 @@ class SFWCog:
 
             items = grab.subreddit_gallery(subreddit =sub_rand)
 
-            image = (items[rand].link)
+            try:
+                image = (items[rand].link)
+            except IndexError:
+                await ctx.send("OH NOO! :grimacing: my search couldn't find anything, please try again!")
 
             imagename = (items[rand].title)
 
