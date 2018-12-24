@@ -4,6 +4,7 @@ import discord
 import random
 import ctx
 import json
+import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
 from imgurpython import ImgurClient
@@ -28,10 +29,16 @@ async def on_ready():
 
 @client.command()
 async def ping(ctx):
-    await ctx.send('Pong!')
+    async with ctx.typing():
+        await asyncio.sleep(.05)
+            
+        await ctx.send('Pong!')
 
 @client.command()
 async def pingNSFW(ctx):
+    async with ctx.typing():
+        await asyncio.sleep(.05)
+
     if  ctx.channel.is_nsfw():
         await ctx.send("Go for it you filthy animal")
     else : 
@@ -41,6 +48,9 @@ async def pingNSFW(ctx):
 #help command#
 @client.command()
 async def help(ctx):
+    async with ctx.typing():
+        await asyncio.sleep(.05)
+            
     embed = discord.Embed(
         description = 'Below you will find a list of commands that you can use with me',
         colour = discord.Colour.purple()
