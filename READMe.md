@@ -20,9 +20,8 @@ The bot currently uses "." as a prefix.
 
 2. Fix " list index out of range " Index error for some subs when it cannot find an image
             - make it either loop to try again or print error for user to try again
-            
-3. Fix "embed load error" **Current Focus**            
-            
+                     
+3. And add a "bot is typing..." feature to the bot so user doesnt think bot is malfunctioning while loading content. **Current Focus**       
 
 4. Add Games (8ball, question games etc.)
 
