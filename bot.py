@@ -99,6 +99,7 @@ async def help(ctx):
     '`nsfw indian        :` Spicy indian girls\n'+
     '`nsfw white         :` Pale cuties'
     , inline=False)
+    embed.add_field(name='\u200b', value='More commands to be added soon :wink:', inline=False)
 
     await ctx.send(embed=embed)
 
