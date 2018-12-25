@@ -51,7 +51,13 @@ class SFWCog:
             try:
                 image = (items[rand].link)
             except IndexError:
-                await ctx.send("OH NOO! :grimacing: my search couldn't find anything, please try again!")
+                embed_error = discord.Embed(
+                    title ="OH NOO! :grimacing: my search couldn't find anything, please try again!",
+                    colour= discord.Colour.red()
+                    )
+                embed_error.set_image(url='https://i.imgur.com/J4WMX0y.gif')
+                
+                await ctx.send(embed=embed_error) ###To handle Index error#
 
             imagename = (items[rand].title)
 
@@ -68,8 +74,8 @@ class SFWCog:
             embed.add_field(name='\u200b', value=image, inline=False)
 
             if image.endswith('.mp4'):
-                
-                embed.add_field(name=':arrow_up:Discord is gay and wont support HQgifs, so heres a link:arrow_up: ', value='\u200b', inline=False) ###BECAUSE DISCORD DOES NOT SUPPORT VIDEO EMBEDS##
+                embed.add_field(name=':arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:', value='\u200b', inline=False) ###BECAUSE DISCORD DOES NOT SUPPORT VIDEO EMBEDS##
+                embed.add_field(name='Discord is gay and wont support HQgifs, so heres a link', value=image, inline=False)
 
             embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name)
 
