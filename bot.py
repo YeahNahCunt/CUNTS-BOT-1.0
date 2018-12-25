@@ -11,14 +11,14 @@ from imgurpython import ImgurClient
 
 #clients or defining variables#
 
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = '*')
 client.remove_command('help')
 
 
 #For Bot Debug and status#
 @client.event
 async def on_ready():
-    await client.change_presence(game=discord.Game(name='.help'))
+    await client.change_presence(game=discord.Game(name='*help'))
     print('Bot is ready.')
     print(discord.__version__)
     print('Logged in as')
