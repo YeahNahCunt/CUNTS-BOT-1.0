@@ -71,15 +71,16 @@ class SFWCog:
 
             embed.add_field(name='\u200b',value='From : r/'+ sub_rand, inline=False) ###'\u200b' HTML cheat to keep field clear##
 
-            embed.add_field(name='\u200b', value=image, inline=False)
+            embed.add_field(name='\u200b', value='Not loading? Here is a link:\n' + image, inline=False)
 
             if image.endswith('.mp4'):
-                embed.add_field(name=':arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:  :arrow_up:', value='\u200b', inline=False) ###BECAUSE DISCORD DOES NOT SUPPORT VIDEO EMBEDS##
-                embed.add_field(name='Discord is gay and wont support HQgifs, so heres a link', inline=False)
+                embed.add_field(name=':arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:', value='\u200b', inline=False) ###BECAUSE DISCORD DOES NOT SUPPORT VIDEO EMBEDS##
 
             embed.set_footer(icon_url= avatar, text='Requested by: ' + author.name)
 
             await ctx.send(embed=embed)
+            if image.endswith('.mp4'):
+                await ctx.send(image)            
 
 
 def setup(client):
