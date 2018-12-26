@@ -58,6 +58,7 @@ class SFWCog:
                 embed_error.set_image(url='https://i.imgur.com/J4WMX0y.gif')
                 
                 await ctx.send(embed=embed_error) ###To handle Index error#
+                print(sub_rand)##to catch subs that often consistantly invoke Index error so I can remove them##
 
             imagename = (items[rand].title)
 
@@ -81,7 +82,7 @@ class SFWCog:
             await ctx.send(embed=embed)
             if image.endswith('.mp4'):
                 await ctx.send(image)            
-
+                print(sub_rand)##to catch subs that often consistantly invoke any other errors such as error so I can remove them##
 
 def setup(client):
     client.add_cog(SFWCog(client))
