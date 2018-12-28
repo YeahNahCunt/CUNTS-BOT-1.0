@@ -1,5 +1,4 @@
 import Auth #File contains login and token#
-import configparser
 import discord
 import random
 import ctx
@@ -64,7 +63,8 @@ async def help(ctx):
     '`pingNSFW           :` Ping bot to see if channel is NSFW', inline=False)
     embed.add_field(name=':baby_bottle: Safe for work commands :baby_bottle:', value=
     '`iwant memes        :` For dank Memes\n'+
-    '`iwant gifs         :` For dank Gifs', inline=False)
+    '`iwant gifs         :` For dank Gifs\n'+
+    '`islamqa            :` For the newest questions being asked on islamqa.info\n', inline=False)
     embed.add_field(name=':underage: General NSFW :underage:', value=
     '`nsfw amateur       :` Amateur girls\n'+
     '`nsfw anal          :` For your anal fixations\n'+
@@ -104,8 +104,11 @@ async def help(ctx):
     await ctx.send(embed=embed)
 
 
+
+
 ##Load Cogs##
 client.load_extension('cogs.SFWCommands')
 client.load_extension('cogs.NSFW')
+client.load_extension('cogs.IslamQa')
 
 client.run(Auth.discord_token)
