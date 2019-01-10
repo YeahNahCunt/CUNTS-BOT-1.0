@@ -16,17 +16,17 @@ The bot currently uses "*" as a prefix.
 
 3. Pull IslamQa home page questions (see *help)
 
+4. Some fun SFW games and commands have been added (see *help)
+
 
 ## **Things to fix and I want to add**:
 
-2. Fix " list index out of range " Index error for some subs when it cannot find an image **Current Focus**
+1. Fix " list index out of range " Index error for some subs when it cannot find an image **Current Focus**
             - make it either loop to try again or print error for user to try again **Current Focus**       
 
-4. Add Games (8ball, question games etc.)
+2. Add More SFW commands
 
-5. Add More SFW commands
+3. Down the line add Sripture query functions to Bible, Quran, Gurbani etc. (To cater to my server users)
 
-6. Down the line add Sripture query functions to Bible, Quran, Gurbani etc. (To cater to my server users)
-
-7. Add search functionality to the IsalamQa query **Current Focus**  
+4. Add search functionality to the IsalamQa query **Current Focus**  
 
