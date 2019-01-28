@@ -27,7 +27,7 @@ class NSFWCog:
         description="used for testing JSON file; can be used as .code_test **subtypename**"
         )
     async def nsfw(self, ctx, userinput):
-        if  ctx.channel.is_nsfw():
+        if  ctx.channel.is_nsfw(): #catching NSFW rooms (may need to build a separate cog for this stuff)
             async with ctx.typing():
                 await asyncio.sleep(.05)
 
