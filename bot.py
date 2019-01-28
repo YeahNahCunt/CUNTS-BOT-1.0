@@ -44,24 +44,66 @@ async def pingNSFW(ctx):
         await ctx.send("You can't use that command here idiot! GO to a NSFW room!")
 
 
-#help command#
+#help home#
 @client.command()
 async def help(ctx):
     async with ctx.typing():
         await asyncio.sleep(.05)
             
     embed = discord.Embed(
-        description = 'Below you will find a list of commands that you can use with me',
+        description = 'Below you will find a list of help commands that you can use with me',
         colour = discord.Colour.purple()
     )
 
     embed.set_author(name='Cunts Bot Helpcenter')
-    embed.set_thumbnail(url='https://www.nydailynews.com/resizer/gVvubfLWIcXCqhWyJYTiVte36V4=/800x0/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/3UXXG5RXAOTFCM4K4QXN6WL3SM.jpg')
+    embed.set_thumbnail(url='https://i.imgur.com/nOePjfE.jpg')
     embed.set_footer(text='Any reccomendations/requests/bugs can be directed to Cunt ( Disturbed#3853 )')
-    embed.add_field(name=':spy: General :spy:', value=
-    '`ping               :` Ping bot to see if online\n'+
-    '`pingNSFW           :` Ping bot to see if channel is NSFW', inline=False)
+    embed.add_field(name=':speech_balloon:  Translations :speech_balloon:', value= '`help_translations`', inline=False)
+    embed.add_field(name=':baby_bottle: Safe for work commands :baby_bottle:', value= '`help_sfw`', inline=False)
+    embed.add_field(name=':underage: NSFW commands :underage:', value= '`help_nsfw`', inline=False)
+
+    await ctx.send(embed=embed)
+
+#translate help
+@client.command()
+async def help_translations(ctx):
+    async with ctx.typing():
+        await asyncio.sleep(.05)
+            
+    embed = discord.Embed(
+        description = 'Translation help centre instructions',
+        colour = discord.Colour.purple()
+    )
+
+    embed.set_author(name='Cunts Bot Helpcenter for Translations')
+    embed.set_thumbnail(url='https://i.imgur.com/nOePjfE.jpg')
+    embed.set_footer(text='Any reccomendations/requests/bugs can be directed to Cunt ( Disturbed#3853 )')
+    embed.add_field(name=':speech_balloon:  Translations :speech_balloon: ', value=
+    '`The bot can do translations for the following languages:`\n'+
+    '\u200b\n'+ #cheat for line break
+    'React to message with :flag_gb: for an ENGLISH translation\n'+
+    'React to message with :flag_sa: for an ARABIC translation\n'+
+    '\u200b\n'+
+    'If you would like any other languages added to the functionality plese contact Cunt ( Disturbed#3853 )', 
+    inline=False)
+    await ctx.send(embed=embed)
+
+#SFW help
+@client.command()
+async def help_sfw(ctx):
+    async with ctx.typing():
+        await asyncio.sleep(.05)
+            
+    embed = discord.Embed(
+        description = 'Safe for general rooms help centre instructions',
+        colour = discord.Colour.purple()
+    )
+
+    embed.set_author(name='Cunts Bot Helpcenter for SFW')
+    embed.set_thumbnail(url='https://i.imgur.com/nOePjfE.jpg')
+    embed.set_footer(text='Any reccomendations/requests/bugs can be directed to Cunt ( Disturbed#3853 )')
     embed.add_field(name=':baby_bottle: Safe for work commands :baby_bottle:', value=
+    '\u200b\n'+ #cheat for line break
     '`iwant memes        :` For dank Memes\n'+
     '`iwant gifs         :` For dank Gifs\n'+
     '`iwant aww          :` For all of the cuteness\n'+
@@ -70,45 +112,72 @@ async def help(ctx):
     '`insult             :` Mention yourself or someone else to get a sick burn\n'
     '`howgay             :` Mention yourself or someone else to find out how gay they are\n'+
     '`dong               :` Mention yourself or someone else to find out their dong length\n'+
-    '`islamqa            :` For the newest questions being asked on islamqa.info\n', inline=False)
-    embed.add_field(name=':underage: General NSFW :underage:', value=
-    '`nsfw amateur       :` Amateur girls\n'+
-    '`nsfw anal          :` For your anal fixations\n'+
-    '`nsfw ass           :` For some sweet booty\n'+
-    '`nsfw boobs         :` Mmmmhhh boobs\n'+
-    '`nsfw gonewild      :` random image from gonewild subreddit\n'
-    '`nsfw milf          :` Hot mommas\n'+
-    '`nsfw gifs          :` Sexy gifs\n'+
-    '`nsfw petite        :` Petite cute girls\n'+
-    '`nsfw teen          :` Legal teens', inline=False)
-    embed.add_field(name=':fire: KINK NSFW :fire:', value=
-    '`nsfw blowjob       :` Sexy BJs\n'+
-    '`nsfw BDSM          :` Hot, sweaty and rough\n'+
-    '`nsfw celeb         :` Celebs and their best nude/sexy content\n'+
-    '`nsfw cum           :` We got your protein fix here\n'+
-    '`nsfw fit           :` Female Body Perfection\n'
-    '`nsfw gay           :` A place for sexy guys\n'+
-    '`nsfw lesbian       :` Girl on girl action\n'+
-    '`nsfw orgasm        :` "O" Faces. Faces of Ecstasy\n'+
-    '`nsfw outfits       :` Hot pics of people in NSFW Outfits\n'+
-    '`nsfw pussy         :` It is not about cats\n'+
-    '`nsfw thicc         :` Sexy curves\n'+
-    '`nsfw thigh         :` Thick thighs and luscious curves\n'+
-    '`nsfw trans         :` Traps and trans\n'+
-    '`nsfw hentai        :` Rule 34 an dother weeb trash', inline=False)
-    embed.add_field(name=':earth_africa: Ethnic NSFW :earth_asia:', value=
-    '`nsfw ethnic        :` For your random exotic cravings\n'+
-    '`nsfw arab          :` Middle eastern hotties\n'+
-    '`nsfw asian         :` For that Eastern taste\n'+
-    '`nsfw black         :` Tastes like chocolate\n'+
-    '`nsfw latino        :` Hot blooded latin girls\n'
-    '`nsfw indian        :` Spicy indian girls\n'+
-    '`nsfw white         :` Pale cuties'
-    , inline=False)
-    embed.add_field(name='\u200b', value='More commands to be added soon :wink:', inline=False)
-
+    '`islamqa            :` For the newest questions being asked on islamqa.info\n'
+    '\u200b\n' 
+     , inline=False)
     await ctx.send(embed=embed)
 
+#NSFW help
+@client.command()
+async def help_nsfw(ctx):
+    if  ctx.channel.is_nsfw(): #checks if room is NSFW or not
+        async with ctx.typing():
+            await asyncio.sleep(.05)
+            
+        embed = discord.Embed(
+            description = 'NSFW help centre instructions',
+            colour = discord.Colour.purple()
+        )
+
+        embed.set_author(name='Cunts Bot Helpcenter for NSFW')
+        embed.set_thumbnail(url='https://i.imgur.com/nOePjfE.jpg')
+        embed.set_footer(text='Any reccomendations/requests/bugs can be directed to Cunt ( Disturbed#3853 )')
+        embed.add_field(name=':underage: General NSFW :underage:', value=
+        '\u200b\n'+ #cheat for line break
+        '`nsfw amateur       :` Amateur girls\n'+
+        '`nsfw anal          :` For your anal fixations\n'+
+        '`nsfw ass           :` For some sweet booty\n'+
+        '`nsfw boobs         :` Mmmmhhh boobs\n'+
+        '`nsfw gonewild      :` random image from gonewild subreddit\n'
+        '`nsfw milf          :` Hot mommas\n'+
+        '`nsfw gifs          :` Sexy gifs\n'+
+        '`nsfw petite        :` Petite cute girls\n'+
+        '`nsfw teen          :` Legal teens\n'+
+        '\u200b' #cheat for line break
+        , inline=False)
+        embed.add_field(name=':fire: KINK NSFW :fire:', value=
+        '\u200b\n'+ #cheat for line break
+        '`nsfw blowjob       :` Sexy BJs\n'+
+        '`nsfw BDSM          :` Hot, sweaty and rough\n'+
+        '`nsfw celeb         :` Celebs and their best nude/sexy content\n'+
+        '`nsfw cum           :` We got your protein fix here\n'+
+        '`nsfw fit           :` Female Body Perfection\n'
+        '`nsfw gay           :` A place for sexy guys\n'+
+        '`nsfw lesbian       :` Girl on girl action\n'+
+        '`nsfw orgasm        :` "O" Faces. Faces of Ecstasy\n'+
+        '`nsfw outfits       :` Hot pics of people in NSFW Outfits\n'+
+        '`nsfw pussy         :` It is not about cats\n'+
+        '`nsfw thicc         :` Sexy curves\n'+
+        '`nsfw thigh         :` Thick thighs and luscious curves\n'+
+        '`nsfw trans         :` Traps and trans\n'+
+        '`nsfw hentai        :` Rule 34 an dother weeb trash\n'+
+        '\u200b' #cheat for line break
+        , inline=False)
+        embed.add_field(name=':earth_africa: Ethnic NSFW :earth_asia:', value=
+        '\u200b\n'+ #cheat for line break
+        '`nsfw ethnic        :` For your random exotic cravings\n'+
+        '`nsfw arab          :` Middle eastern hotties\n'+
+        '`nsfw asian         :` For that Eastern taste\n'+
+        '`nsfw black         :` Tastes like chocolate\n'+
+        '`nsfw latino        :` Hot blooded latin girls\n'
+        '`nsfw indian        :` Spicy indian girls\n'+
+        '`nsfw white         :` Pale cuties\n'+
+        '\u200b' #cheat for line break
+        , inline=False)
+        await ctx.send(embed=embed)
+
+    else : 
+            await ctx.send("You can't use that command here idiot! GO to a NSFW room!")
 
 
 
@@ -116,5 +185,9 @@ async def help(ctx):
 client.load_extension('cogs.SFWCommands')
 client.load_extension('cogs.NSFW')
 client.load_extension('cogs.Games_and_Fun')
+client.load_extension('cogs.IslamQa')
+client.load_extension('cogs.Translator')
+client.load_extension('cogs.Thesaurasize')
+client.load_extension('cogs.Hadith')
 
 client.run(Auth.discord_token)
