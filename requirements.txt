@@ -1,5 +1,9 @@
-configparser
 discord.py *** MUST BE DISCORD REWRITE  (pip install discord-rewrite) ****
-ctx
 Imgurpython ***Imgur API (https://apidocs.imgur.com) ***
 random
+requests **pip install requests**
+json
+asyncio
+beautifulsoup **pip install beautifulsoup4**
+lxml **parser for HTML* *pip install lxml**
+googletrans 
