@@ -18,15 +18,15 @@ The bot currently uses "*" as a prefix.
 
 4. Some fun SFW games and commands have been added (see *help)
 
+5. Translate features added to translate other langauges to English or Arabic via a simple reaction (see *help)
+
 
 ## **Things to fix and I want to add**:
+     
+1. Add More SFW commands
 
-1. Fix " list index out of range " Index error for some subs when it cannot find an image **Current Focus**
-            - make it either loop to try again or print error for user to try again **Current Focus**       
+2. Add Sripture query functions to Bible, Quran, Gurbani etc. (To cater to my server users) 
+            - Hadiths **Current Focus**
 
-2. Add More SFW commands
-
-3. Down the line add Sripture query functions to Bible, Quran, Gurbani etc. (To cater to my server users)
-
-4. Add search functionality to the IsalamQa query **Current Focus**  
+3. Add search functionality to the IsalamQa query **Current Focus**  **So far website is not parsable, attempting alternative avenues**
 
