@@ -186,7 +186,6 @@ client.load_extension('cogs.NSFW')
 client.load_extension('cogs.Games_and_Fun')
 client.load_extension('cogs.IslamQa')
 client.load_extension('cogs.Translator')
-client.load_extension('cogs.Thesaurasize')
 client.load_extension('cogs.Hadith')
 
 client.run(os.environ['BOT_TOKEN'])
