@@ -6,6 +6,9 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 from imgurpython import ImgurClient
 import os
+from boto.s3.connection import S3Connection
+
+BOT_TOKEN = S3Connection(os.environ['BOT_TOKEN'])
 
 #clients or defining variables#
 
