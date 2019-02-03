@@ -5,4 +5,4 @@ requests
 asyncio
 beautifulsoup4
 lxml
-googletrans 
+googletrans
