@@ -1,6 +1,5 @@
 discord.py
 Imgurpython
-random
 requests
 json
 asyncio
