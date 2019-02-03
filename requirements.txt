@@ -6,4 +6,3 @@ asyncio
 beautifulsoup4
 lxml
 googletrans
-boto
