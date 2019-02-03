@@ -1,9 +1,9 @@
-discord.py *** MUST BE DISCORD REWRITE  (pip install discord-rewrite) ****
-Imgurpython ***Imgur API (https://apidocs.imgur.com) ***
+discord
+Imgurpython
 random
-requests **pip install requests**
+requests
 json
 asyncio
-beautifulsoup **pip install beautifulsoup4**
-lxml **parser for HTML* *pip install lxml**
+beautifulsoup
+lxml
 googletrans 
