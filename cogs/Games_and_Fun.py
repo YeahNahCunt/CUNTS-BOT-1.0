@@ -1,10 +1,7 @@
 import discord
 import random
 import asyncio
-import ctx
 import requests
-from io import BytesIO
-from PIL import Image
 from discord.ext import commands
 from discord import Game
 from random import choice
