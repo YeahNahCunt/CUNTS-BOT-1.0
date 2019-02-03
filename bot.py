@@ -7,6 +7,7 @@ import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
 from imgurpython import ImgurClient
+import os
 
 #clients or defining variables#
 
@@ -190,4 +191,4 @@ client.load_extension('cogs.Translator')
 client.load_extension('cogs.Thesaurasize')
 client.load_extension('cogs.Hadith')
 
-client.run(Auth.discord_token)
+client.run(os.environ['BOT_TOKEN'])
