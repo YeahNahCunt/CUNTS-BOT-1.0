@@ -8,7 +8,7 @@ from imgurpython import ImgurClient
 import os
 
 #clients or defining variables#
-
+bot_token=os.environ['BOT_TOKEN']
 client = commands.Bot(command_prefix = '*')
 client.remove_command('help')
 
@@ -188,4 +188,4 @@ client.load_extension('cogs.IslamQa')
 client.load_extension('cogs.Translator')
 client.load_extension('cogs.Hadith')
 
-client.run(os.environ.get('BOT_TOKEN'))
+client.run(bot_token)
