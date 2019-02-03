@@ -188,4 +188,4 @@ client.load_extension('cogs.IslamQa')
 client.load_extension('cogs.Translator')
 client.load_extension('cogs.Hadith')
 
-client.run(os.getenv('BOT_TOKEN'))
+client.run(os.getenv(BOT_TOKEN))
