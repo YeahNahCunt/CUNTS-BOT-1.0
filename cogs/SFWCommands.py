@@ -6,10 +6,11 @@ import json
 import asyncio
 from discord.ext import commands
 from imgurpython import ImgurClient
+import os
 
 #clients or defining variables#
-client_id = Auth.client_id
-client_secret = Auth.client_secret
+client_id = os.environ['client_id']
+client_secret = os.environ['client_secret']
 grab = ImgurClient(client_id, client_secret) #had to give it a diffrent call to function from client as Discords prefix utilises "client" call to function#
 items = grab.gallery()
 
