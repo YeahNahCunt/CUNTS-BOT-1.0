@@ -6,9 +6,6 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 from imgurpython import ImgurClient
 import os
-from boto.s3.connection import S3Connection
-
-BOT_TOKEN = S3Connection(os.environ['BOT_TOKEN'])
 
 #clients or defining variables#
 
@@ -191,4 +188,4 @@ client.load_extension('cogs.IslamQa')
 client.load_extension('cogs.Translator')
 client.load_extension('cogs.Hadith')
 
-client.run(BOT_TOKEN)
+client.run(os.environ('BOT_TOKEN'))
