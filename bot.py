@@ -168,7 +168,7 @@ async def help_nsfw(ctx):
         '`nsfw arab          :` Middle eastern hotties\n'+
         '`nsfw asian         :` For that Eastern taste\n'+
         '`nsfw black         :` Tastes like chocolate\n'+
-        '`nsfw latino        :` Hot blooded latin girls\n'
+        '`nsfw latin        :` Hot blooded latin girls\n'
         '`nsfw indian        :` Spicy indian girls\n'+
         '`nsfw white         :` Pale cuties\n'+
         '\u200b' #cheat for line break
