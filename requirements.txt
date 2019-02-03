@@ -2,6 +2,6 @@ discord.py
 Imgurpython
 requests
 asyncio
-beautifulsoup
+beautifulsoup4
 lxml
 googletrans 
