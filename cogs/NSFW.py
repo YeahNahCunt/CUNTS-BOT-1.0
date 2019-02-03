@@ -1,4 +1,3 @@
-import Auth #File contains login and token#
 import discord
 import random
 import ctx
