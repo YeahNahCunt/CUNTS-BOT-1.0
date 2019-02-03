@@ -1,7 +1,5 @@
 import discord
 import random
-import ctx
-import json
 import asyncio
 from discord.ext import commands
 from imgurpython import ImgurClient
