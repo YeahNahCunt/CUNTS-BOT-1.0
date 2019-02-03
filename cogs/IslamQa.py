@@ -1,4 +1,3 @@
-import ctx
 import discord
 import requests
 import bs4
